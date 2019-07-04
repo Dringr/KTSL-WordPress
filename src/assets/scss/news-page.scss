@@ -1,0 +1,81 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+@include foundation-xy-grid-classes;
+
+// Generic components
+@include foundation-button;
+
+@include foundation-card;
+
+//Custom CSS Partials
+@import 'components/hero',
+'./modules/footer',
+'./modules/navigation',
+'components/sections',
+'components/buttons',
+'./global/typography',
+'components/forms';
+
+a.button.white {
+  margin: 1rem 0 0rem 0;
+}
+
+.bg--large-hex-2 {
+  background: url("/assets/img/bg--large-hex.png");
+  background-repeat: no-repeat;
+  background-position: top 15% left 5%;
+}
+
+.card-hover {
+  transition: all 200ms ease-out;
+}
+
+.card-hover:hover {
+  box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.14);
+}
+
+.carousel-cell {
+  height: 300px;
+  width: calc((100%) - 30px / 3);
+  margin-right: 15px;
+}
+
+.news {
+  @include xy-grid;
+  @include xy-grid-layout(3, '.news__item', true, 40px, margin, right bottom left);
+
+  @include breakpoint(medium only) {
+    @include xy-grid-layout(2, '.news__item');
+  }
+
+  @include breakpoint(small only) {
+    @include xy-grid-layout(1, '.news__item');
+  }
+
+  &__item {
+    display: flex;
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .card-section {
+      display: flex;
+      flex-direction: column;
+      a {
+          width: 80%;
+      }
+      .card-text{
+          flex-grow: 1;
+      }
+    }
+  }
+}

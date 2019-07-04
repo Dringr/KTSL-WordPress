@@ -45,6 +45,10 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 			wp_enqueue_script( 'aos-script', 'https://unpkg.com/aos@next/dist/aos.js', array(), '2.2.1', true );
 			wp_enqueue_script( 'home-page', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'home-page.js' ), array(), '2', true );
 			
+		} else if ( is_page( 'whats-new' ) ) {
+    	// Static page style
+            wp_enqueue_style( 'news-page-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'news-page.css' ) );
+			
 		} else {
 		// Enqueue the main Stylesheet.
 		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'app.css' ), array(), '2.10.4', 'all' );
