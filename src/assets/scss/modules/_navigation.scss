@@ -1,28 +1,152 @@
-// Navigation breakpoints
-.mobile-menu,
-.site-title-bar {
-  @include hide-for(medium);
-}
-//
-.desktop-menu,
-.site-navigation .top-bar-left {
-  @include show-for(medium);
-}
-
-// Site title
-.site-desktop-title a {
-  font-weight: bold;
+//Style & animate the hamburger button.
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 70px;
+    background: transparent;
+    transition: 0.2s;
 }
 
-// WP post navigation
-.post-navigation {
-  @include clearfix;
+#logo {
+    position: fixed;
+    top: 12px;
+    left: 40px;
+    z-index: 999;
+    width: 180px;
+    transition: 0.4s;
 }
 
-.nav-previous {
-  float:left;
+.menu__toggler {
+    position: absolute;
+    top: 15px;
+    right: 40px;
+    z-index: 999;
+    height: 40px;
+    width: 40px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.nav-next {
-  float:right;
+.menu__toggler span,
+.menu__toggler span::before,
+.menu__toggler span::after {
+    position: absolute;
+    content: '';
+    width: 28px;
+    height: 2.5px;
+    background: #fff;
+    border-radius: 20px;
+    transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu__toggler span::before {
+    top: -8px;
+}
+
+.menu__toggler span::after {
+    top: 8px;
+}
+
+.menu__toggler.active>span {
+    background: transparent;
+}
+
+.menu__toggler.active>span::before,
+.menu__toggler.active>span::after {
+    background: #fff;
+    top: 0px;
+}
+
+.menu__toggler.active>span::before {
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+}
+
+.menu__toggler.active>span::after {
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+//The main CSS/CSS3 for the drawer navigation.
+
+.menu {
+    position: fixed;
+    right: -50%;
+    z-index: 1;
+    color: $white;
+    background: #29bcb0;
+    clip-path: polygon(100% 100%, 28% 100%, 0% 0%, 100% 0%);
+    width: 50%;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 300ms right cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menu a {
+    color: $white;
+    font-size: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+
+@for $i from 1 through 7 {
+    .menu a:nth-child(#{$i}) {
+        margin-left: $i + .1rem;
+    }
+}
+
+
+@include breakpoint(medium down) {
+    .menu {
+        width: 100%;
+        right: -100%;
+        padding: 50px;
+        text-align: center;
+        clip-path: polygon(100% 100%, 20% 100%, 0% 0%, 100% 0%);
+    }
+
+    @for $i from 1 through 7 {
+        .menu a:nth-child(#{$i}) {
+            margin-left: 0;
+        }
+    }
+
+}
+
+.menu.active {
+    right: 0;
+}
+
+.menu p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.menu span {
+    position: relative;
+}
+
+.menu span::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1.5px;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 1s ease;
+}
+
+.menu span:hover::before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
 }

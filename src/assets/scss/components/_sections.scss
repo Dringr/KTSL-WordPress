@@ -1,0 +1,198 @@
+.container {
+  @include xy-grid-container;
+}
+
+.grid {
+  @include xy-grid;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+.section {
+  &--large {
+    padding: 9rem 1.5rem;
+    position: relative;
+
+    @media #{$small-only} {
+      padding: 7rem 0.5rem; //Remove and add separate slider class!!!!!!!!!!
+    }
+  }
+
+  &--large-carousel {
+    padding: 9rem 1.5rem;
+    position: relative;
+
+    @include breakpoint(medium down) {
+      padding: 7rem 0rem; //Remove and add separate slider class!!!!!!!!!!
+    }
+  }
+
+
+
+  &--medium {
+    padding: 7rem 1.5rem;
+    position: relative;
+
+    @include breakpoint(medium down) {
+      padding: 5rem 0.5rem; //Remove and add separate slider class!!!!!!!!!!
+    }
+  }
+
+  &--medium-carousel {
+    padding: 7rem 1.5rem;
+    position: relative;
+
+    @include breakpoint(medium down) {
+      padding: 5rem 0rem; //Remove and add separate slider class!!!!!!!!!!
+    }
+  }
+
+  &--small {
+    padding: 5rem 1.5rem;
+    position: relative;
+
+    @media #{$small-only} {
+      padding: 2rem 0.5rem;
+    }
+  }
+
+  &--small-carousel {
+    padding: 5rem 1.5rem;
+    position: relative;
+
+    @include breakpoint(medium down) {
+      padding: 2rem 0rem; //Remove and add separate slider class!!!!!!!!!!
+    }
+  }
+}
+
+//COLOR
+
+.bg {
+  &--primary {
+    background: $primary-color;
+  }
+
+  &--tertiary {
+    background: $tertiary-color;
+  }
+
+  &--blue {
+    background: #444497;
+  }
+}
+
+
+//Home Page
+
+.lead-section__bullets {
+  order: 0;
+
+  @media #{$small-only} {
+    order: 1;
+    padding-top: 2rem;
+  }
+}
+
+.lead-section__main {
+  order: 0;
+
+  @media #{$large-only} {
+    order: 1;
+  }
+}
+
+// Home Page Tabs
+
+.tabs-title>a {
+  @media #{$small-only} {
+    padding-left: 0;
+  }
+}
+
+#example-tabs {
+  @media #{$small-only} {
+    padding-bottom: 2rem;
+  }
+}
+
+.bg--large-hex {
+  background: url("../images/bg--large-hex.png");
+  background-repeat: no-repeat;
+  background-position: left -25% top 106%;
+}
+
+.bg--large-hex-2 {
+  background: url("../images/bg--large-hex.png");
+  background-repeat: no-repeat;
+  background-position: right -25% top 100%;
+}
+
+.bg--large-hex-2-alt {
+  background-image: url("../images/bg--large-hex-alt.png");
+  background-repeat: no-repeat;
+  background-position: left -25% top -160%;
+
+  @include breakpoint(small only) {
+    background-position: left 105% top -69%;
+  }
+}
+
+.bg-hex-02 {
+  background-image: linear-gradient(to left, #090968, #090968 75%, transparent 90%),
+    url("../images/KTSL-website-patterns-03.png");
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  /* Set a specific height */
+  height: 100%;
+
+  @media #{$small-only} {
+    background-image: linear-gradient(to top, #090968, #090968 50%, transparent 70%),
+      url("../images/KTSL-website-patterns-03.png");
+  }
+}
+
+// IP Section
+
+.IP-section__image-wrapper {
+  height: 500px;
+}
+
+.IP-section__image {
+  position: absolute;
+  bottom: 0;
+  right: 80px;
+
+  @include breakpoint(small only) {
+    right: 40px;
+    left: 20px;
+  }
+}
+
+
+.IP-section__image-wrapper {
+  @include breakpoint(small only) {
+    height: 300px;
+  }
+}
+
+.contact--bottom-box {
+  @include breakpoint(small only) {
+    margin-top: 3rem;
+  }
+}
+
+.case-studies__wrapper {
+  height: 400px;
+
+  @include breakpoint(small only) {
+    height: 500px;
+  }
+}

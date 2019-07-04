@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.2 65.2">
+  <title>square-arrow-hover</title>
+  <g id="50e137e0-d71b-4199-bb1d-44929de4b40d" data-name="Layer 2">
+    <g id="edfaf3b1-a47f-41e2-8272-b0e272d046db" data-name="Layer 1">
+      <g>
+        <rect width="65.2" height="65.18" fill="#29bbb0"/>
+        <path d="M42,40.5,40.5,42H28.8V39.4h7.5l1.3.2v-.3l-1-.8L23,24.9,24.9,23,38.5,36.6l.8,1h.3l-.2-1.3V28.8H42Z" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

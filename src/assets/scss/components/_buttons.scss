@@ -1,8 +1,54 @@
-.sites-button {
-  background: $primary-color;
-  font-size: 1.25rem;
-  font-weight: bold;
-  box-shadow: 0 -2px 0 rgba(0,0,0,0.2) inset;
-  border-radius: 3px;
-  border: none;
+.button {
+
+    &.primary:hover {
+        border: 4px solid $primary-color;
+        background-color: $primary-color;
+        color: $white;
+    }
+
+    &.primary:focus {
+        border: 4px solid $primary-color;
+        background-color: $primary-color;
+        color: $white;
+    }
+
+    &.white:hover {
+        border: 4px solid $white;
+        background-color: $white;
+        color: $primary-color;
+    }
+
+    &.tertiary:hover {
+        border: 4px solid $tertiary-color;
+        background-color: $tertiary-color;
+        color: $white;
+    }
+
+    padding: 1rem 3rem;
+
+    @include breakpoint(small only) {
+        padding: 1rem 4rem;
+    }
+}
+
+
+@include breakpoint(small only) {
+    .button__wrapper {
+        text-align: center
+    }
+}
+
+.button__wrapper {
+    &--mobile {
+        
+        @include breakpoint(medium) {
+            display: none;
+        }
+    }
+
+    &--medium-up {
+        @include breakpoint(small only) {
+            display: none;
+        }
+    }
 }

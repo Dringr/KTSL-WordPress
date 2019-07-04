@@ -1,0 +1,43 @@
+.form {
+    padding: 0 0 .5rem 0;
+
+    &--white {
+        border-bottom: 3px solid white;
+    }
+
+    &--grey {
+        border-bottom: 3px solid #6e6e70;
+        color: #6e6e70;
+
+        :focus {
+            color: #6e6e70;
+        }
+    }
+}
+
+.form--white::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+
+input.form.form--grey::placeholder {
+    color: #6e6e70;
+    opacity: 1;
+    border: 3px solid #6e6e70;
+}
+
+[type="text"]:focus,
+[type="email"]:focus,
+[type="number"]:focus,
+textarea:focus {
+    background-color: transparent;
+}
+
+.form--white:focus {
+    border: none;
+    border-bottom: 3px solid white;
+}
+.form--grey:focus {
+    border: none;
+    border-bottom: 3px solid #6e6e70;
+}
