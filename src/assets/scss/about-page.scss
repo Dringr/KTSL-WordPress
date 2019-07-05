@@ -1,0 +1,209 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Generic components
+@include foundation-button;
+
+@include foundation-card;
+
+//Custom CSS Partials
+@import 'components/hero',
+'components/carousel',
+'./modules/footer',
+'./modules/navigation',
+'components/sections',
+'components/buttons',
+'./global/typography',
+'components/forms';
+
+//About Page CSS
+.has-m-1-5 {
+    margin: 1.5rem;
+}
+
+.bg-hex-02 {
+    background-image: url("../images/KTSL-website-patterns-02.png");
+    background-repeat: repeat;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    /* Set a specific height */
+    height: 100%;
+}
+
+
+.section--experience::before {
+    background-size: 3000px 140px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    visibility: visible;
+    z-index: 10;
+    background-image: url("../images/sloped/bg__slope--2.svg");
+    height: 120px;
+    top: 0;
+    background-clip: content-box;
+}
+
+.section--leadership::before {
+    background-size: 3000px 140px;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    visibility: visible;
+    z-index: 10;
+    background-image: url("../images/sloped/bg__slope--3.svg");
+    height: 130px;
+    top: 0;
+    background-clip: content-box;
+}
+
+
+.why-ktsl {
+    @include xy-grid-layout(1, '.why-ktsl__item');
+
+    @include breakpoint(large) {
+        @include xy-grid-layout(3, '.why-ktsl__item');
+    }
+}
+
+.our-experience {
+    margin-bottom: -300px;
+    z-index: 9;
+    position: relative;
+    @include xy-grid-layout(1, '.our-experience__item');
+
+    @include breakpoint(medium) {
+        @include xy-grid-layout(2, '.our-experience__item');
+    }
+
+    @include breakpoint(large) {
+        @include xy-grid-layout(4, '.our-experience__item');
+    }
+}
+
+.our-experience__item {
+    display: flex;
+    text-align: center;
+
+    & .card {
+        padding: .5rem;
+    }
+
+    img {
+        height: 80px;
+        padding-top: 1.5rem;
+    }
+
+    a {
+        margin: 0.5rem 0 1rem 0;
+    }
+}
+
+.card-section {
+    padding: 1rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+}
+
+.card-content {
+    font-size: 0.9rem;
+}
+
+
+// Experience Carousel 
+.section--experience-mobile {
+    @include breakpoint(large) {
+        display: none;
+    }
+}
+
+.section--experience-desktop {
+    @include breakpoint(medium down) {
+        display: none;
+    }
+}
+
+.section__partner {
+    padding-top: 250px;
+    background-color: #eae9e9;
+
+    @include breakpoint(medium down) {
+        padding-top: 150px;
+    }
+}
+
+.experience-carousel {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 9;
+
+    >div {
+        margin-bottom: -200px;
+    }
+
+    .card {
+        @include breakpoint(medium down) {
+            height: 430px;
+            margin: 1.5rem .2rem;
+            padding: 1rem;
+        }
+    }
+
+    .carousel-cell {
+        transform: scale(0.92);
+    }
+
+    .carousel-cell.is-selected {
+        transform: scale(1);
+    }
+}
+
+
+.customers {
+    @include xy-grid-layout(2, '.customers__item');
+
+    @include breakpoint(medium) {
+        @include xy-grid-layout(3, '.customers__item');
+    }
+
+    @include breakpoint(large) {
+        @include xy-grid-layout(6, '.customers__item');
+    }
+}
+
+.border--team {
+    border-right: 1.5px solid #01caa8;
+}
+
+.team {
+    @include xy-grid-layout(2, '.team__item', true, 30px, padding, top right bottom left);
+
+
+    @include breakpoint(medium) {
+        @include xy-grid-layout(3, '.team__item', true, 30px, padding, top right bottom left);
+    }
+
+    @include breakpoint(large) {
+        @include xy-grid-layout(4, '.team__item', true, 30px, padding, top right bottom left);
+    }
+}
