@@ -34,16 +34,16 @@
 
 
 
-    <a id="logo" id="logo" href="/index.html" class="logo">
+    <a id="logo" id="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/svg/logos/KTSL-no-strap.svg" alt="">
     </a>
   <nav class="menu">
-    <a href="/solutions.html"><span>Solutions</span></a>
-    <a href="/news.html"><span>News & events</span></a>
-    <a href="/case-studies.html"><span>Case Studies</span></a>
-    <a href="/about-us.html"><span>About us</span></a>
-    <a href="/careers.html"><span>Careers</span></a>
-    <a href="/contact.html"><span>Contact</span></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>solutions"><span>Solutions</span></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>news"><span>News & events</span></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>case-studies"><span>Case Studies</span></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us"><span>About us</span></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>careers"><span>Careers</span></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><span>Contact</span></a>
     <a href=""><span>Support</span></a>
   </nav>
   <div id="navbar" class="menu__toggler">

@@ -22,12 +22,12 @@
         </div>
         <div class="footer__menu">
             <ul class="text--white">
-                <li><a href="/solutions.html"><span>Solutions</span></a></li>
-                <li><a href="/news.html"><span>News & events</span></a></li>
-                <li><a href="/case-studies.html"><span>Case Studies</span></a> </li>
-                <li> <a href="/about-us.html"><span>About us</span></a></li>
-                 <li><a href="/careers.html"><span>Careers</span></a></li>
-                <li> <a href="/contact.html"><span>Contact</span></a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>solutions"><span>Solutions</span></a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>news"><span>News & events</span></a></li>
+                <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>case-studies"><span>Case Studies</span></a> </li>
+                <li> <a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us"><span>About us</span></a></li>
+                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>careers"><span>Careers</span></a></li>
+                <li> <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><span>Contact</span></a></li>
                 <li><a href=""><span>Support</span></a></li>
             </ul>
         </div>

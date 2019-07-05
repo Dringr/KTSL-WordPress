@@ -1,0 +1,105 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Generic components
+@include foundation-button;
+
+
+
+//Custom CSS Partials
+@import 
+'components/hero',
+'components/carousel',
+'./modules/footer',
+'./modules/navigation',
+'components/sections',
+'components/buttons',
+'./global/typography',
+'components/forms';
+
+
+.carousel-cell {
+    width: 100%;
+}
+
+.speech-bubble__wrapper {
+    width: 280px;
+    margin: auto;
+    position: relative;
+}
+
+.speech-bubble__wrapper img {
+    height: 100%;
+}
+
+.speech-bubble__text {
+    position: absolute;
+    width: 80%;
+    top: 10%;
+    left: 10%;
+}
+
+
+.page-break--case-studies {
+    border-bottom: 4px solid #959595;
+    padding-bottom: 2rem;
+}
+
+@include breakpoint(medium down) {
+    .speech-bubble {
+        order: 4;
+    }
+
+    .speech-bubble__wrapper {
+        margin-left: 0%;
+    }
+}
+
+
+.site-hero {
+    height: $hero-height;
+    display: flex;
+    align-items: center;
+    position: relative;
+  &.site-hero--case-studies {
+        background:
+            linear-gradient(#00000040, #00000040),
+            url("../images/black-and-white-blur-college-76752.jpg") no-repeat center;
+        background-size: cover;
+    }
+}
+
+.case-study {
+    @include xy-grid;
+    align-items: center;
+
+    &__logo {
+        margin: auto;
+    }
+
+    @include breakpoint(small only) {
+    &__bubble {
+        display: none;
+    }
+    &__logo {
+        padding-bottom: 1rem;
+    }
+    }
+    @include breakpoint(large) {
+    &__logo,
+    &__bubble {
+        @include xy-cell(4);
+    }
+    &__content,
+    &__title {
+        @include xy-cell(8);
+    }
+    }
+}

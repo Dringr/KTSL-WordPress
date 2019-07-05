@@ -10,7 +10,7 @@ get_header(); ?>
     <p class="text--white">
       By understanding the issues you face and the constraints <br />
     you have to work within, we create real-world solutions that <br />
-    can transform your business.'
+    can transform your business.
   </p>
   </div>  
 </section>
