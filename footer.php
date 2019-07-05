@@ -27,7 +27,7 @@
                 <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>case-studies"><span>Case Studies</span></a> </li>
                 <li> <a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us"><span>About us</span></a></li>
                  <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>careers"><span>Careers</span></a></li>
-                <li> <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><span>Contact</span></a></li>
+                <li> <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us"><span>Contact</span></a></li>
                 <li><a href=""><span>Support</span></a></li>
             </ul>
         </div>

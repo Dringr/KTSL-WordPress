@@ -81,3 +81,15 @@
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";
+
+
+//Custom CSS Partials
+@import 
+'components/hero',
+'components/carousel',
+'./modules/footer',
+'./modules/navigation',
+'components/sections',
+'components/buttons',
+'./global/typography',
+'components/forms';

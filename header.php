@@ -43,7 +43,7 @@
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>case-studies"><span>Case Studies</span></a>
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us"><span>About us</span></a>
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>careers"><span>Careers</span></a>
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact"><span>Contact</span></a>
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us"><span>Contact</span></a>
     <a href=""><span>Support</span></a>
   </nav>
   <div id="navbar" class="menu__toggler">
