@@ -1,0 +1,214 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+// Global styles
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Generic components
+@include foundation-button;
+
+//Custom CSS Partials
+@import 'components/hero',
+'./modules/footer',
+'./modules/navigation',
+'components/sections',
+'components/buttons',
+'./global/typography',
+'components/forms';
+
+@media screen and (min-width: 40em) and (max-width: 63.99875em) {
+    #phone img {
+        width: 100%;
+    }
+}
+
+
+.animation__wrapper {
+    position: relative;
+    width: 100%;
+
+    &--laptop {
+        height: 458px;
+
+        @include breakpoint(small only) {
+            height: 326px;
+        }
+    }
+
+    &--iphone {
+        height: 600px;
+
+        @include breakpoint(small only) {
+            height: 424px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &--ipad {
+        height: 600px;
+
+        @include breakpoint(small only) {
+            height: 363px;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &--flag {
+        height: 400px;
+
+        @include breakpoint(small only) {
+            height: 283px;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+@include breakpoint(small only) {
+
+    .solution-text {
+
+        &--flag,
+        &--iphone {
+            order: 2;
+        }
+    }
+
+    .solution-image {
+
+        &--flag,
+        &--iphone {
+            order: 1;
+        }
+    }
+}
+
+
+
+//Laptop Section
+
+.animation {
+    align-items: center;
+    @include xy-cell(12);
+
+    &__image {
+        @include xy-cell(12);
+
+        @include breakpoint(medium) {
+            @include xy-cell(10);
+            @include xy-cell-offset(1);
+            padding-bottom: 2rem;
+        }
+
+        @include breakpoint(large) {
+            @include xy-cell(6);
+            @include xy-cell-offset(0);
+        }
+
+    }
+
+    &__content {
+        @include xy-cell(10);
+        @include xy-cell-offset(1);
+
+        @include breakpoint(large) {
+            @include xy-cell(5);
+            @include xy-cell-offset(1);
+        }
+    }
+}
+
+
+.animation-2 {
+    align-items: center;
+
+    &__image {
+
+        @include xy-cell(10);
+        @include xy-cell-offset(1);
+        padding-bottom: 2rem;
+
+        @include breakpoint(large) {
+            @include xy-cell(6);
+            @include xy-cell-offset(1);
+        }
+    }
+
+    &__content {
+        @include xy-cell(10);
+        @include xy-cell-offset(1);
+
+        @include breakpoint(large) {
+            @include xy-cell(5);
+            @include xy-cell-offset(0);
+        }
+    }
+}
+
+.animation-3 {
+    align-items: center;
+
+    &__image {
+        @include xy-cell(12);
+
+        @include breakpoint(medium) {
+            @include xy-cell(10);
+            @include xy-cell-offset(1);
+            padding-bottom: 2rem;
+        }
+
+        @include breakpoint(large) {
+            @include xy-cell(6);
+            @include xy-cell-offset(0);
+        }
+    }
+
+    &__content {
+        @include xy-cell(10);
+        @include xy-cell-offset(1);
+
+        @include breakpoint(large) {
+            @include xy-cell(5);
+            @include xy-cell-offset(1);
+        }
+    }
+}
+
+.animation-4 {
+    align-items: center;
+
+    &__image {
+        @include xy-cell(12);
+
+        @include breakpoint(medium) {
+            @include xy-cell(10);
+            @include xy-cell-offset(1);
+        }
+
+        @include breakpoint(large) {
+            @include xy-cell(6);
+            @include xy-cell-offset(0);
+        }
+    }
+
+    &__content {
+        @include xy-cell(10);
+        @include xy-cell-offset(1);
+
+        @include breakpoint(large) {
+            @include xy-cell(6);
+            @include xy-cell-offset(0);
+        }
+    }
+}
+
+#flag>img,
+#laptop>img,
+#phone>img,
+#ipad>img {
+    position: absolute;
+}
