@@ -492,6 +492,11 @@
     }
 }
 
+.event__item > img{
+    height: 100%;
+    object-fit:cover;
+}
+
 .events-previous__item {
     width: 48%;
     margin-bottom: 1rem;
@@ -499,7 +504,10 @@
     align-items: flex-end;
     flex: 1;
     height: 180px;
-
+    &:last-child {
+        margin-bottom:0;
+    }
+    
     @include breakpoint(large) {
         width: 100%;
         height: auto;
@@ -523,6 +531,12 @@
         height: 30%;
     }
 }
+.events-previous__image {
+    height:100%;
+    object-fit: cover;
+}
+
+
 
 .events-contact__wrapper {
     @include xy-cell(12);

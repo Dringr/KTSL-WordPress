@@ -441,6 +441,123 @@ get_header(); ?>
 
       <div class="events-previous__wrapper">
         <p class="text--primary webinars__contact">→ Previous</p>
+
+
+
+
+                        <?php
+                          $query = new WP_Query(array(
+                            'post_status' => 'publish',
+                            'category_name' => 'event',
+                            'orderby' => 'publish_date',
+                            'order' => 'ASC',
+                            'posts_per_page' => 3
+                          ));
+                          ?>
+                        <?php if ($query->have_posts()) : ?>
+                        <!-- the loop -->
+                        <?php while ($query->have_posts()) : $query->the_post(); ?>
+
+
+                        <a href="<?php the_permalink(); ?>" class="events-previous__item">
+                            <div class="flex-child-auto event__item" style="height: 100%; position:relative;">
+
+                                <?php the_post_thumbnail(); ?>
+
+                                <p style="position: absolute; bottom: 8px; left: 60px;"
+                                    class="text--white">
+                                    <?php the_title(); ?>
+                                </p>
+                                <div>
+                                    <img style="position: absolute; bottom:0; left:0;"
+                                        src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/svg/square-arrow.svg"
+                                        alt="" width="50px;">
+                                </div>
+                            </div>
+                        </a>
+
+                        <?php endwhile; ?>
+                        <!-- end of the loop -->
+                        <?php wp_reset_postdata(); ?>
+                        <?php else :  ?>
+                        <p><?php _e('There are currently no events, please check back soon.'); ?></p>
+                        <?php endif; ?>
+
+</div>
+      <div class="events-contact__wrapper">
+        <p class="text--subtitle webinars__contact-form">Register for event & webinar updates</p>
+        <label>
+          <input class="form form--grey" type="text" placeholder="Name" />
+        </label>
+        <label>
+          <input class="form form--grey" type="text" placeholder="Surname" />
+        </label>
+        <label>
+          <input class="form form--grey" type="text" placeholder="Phone number" />
+        </label>
+        <label>
+          <input class="form form--grey" type="text" placeholder="Email" />
+        </label>
+        <label>
+          <input class="form form--grey" type="text" placeholder="Company name" />
+        </label>
+        <div class="button__wrapper">
+        <a href="about" class="button primary">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- WEBINAR SECTION -->
+<section class="section--small">
+  <div class="container">
+    <h2 class="text-center padding-bottom-2 text--primary">Webinars & events</h2>
+  </div>
+  <div class="container">
+    <div class="grid">
+
+      <div class="event-upcoming__wrapper">
+
+        <a>
+        <p class="text--primary webinars__contact">→ Upcoming</p>
+          <div class="card-image event">
+          </div>
+          <p style="position: absolute; bottom: 10px; left: 100px;" class="text--white margin-bottom-0">
+          <span
+              class="text--subtitle">
+              TrueSight Cloud Security Webinar</span>
+            <br />
+            Automated cloud and container security and compliance at scale
+          </p>
+          <div>
+            <svg class="square-arrow" style="position: absolute; bottom:0; left:0;width:80px;" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 65.18 65.18">
+              <title>square-arrow</title>
+              <g id="f4e862c7-7d3e-44f1-a435-7fda4c1a16b9" data-name="Layer 2">
+                <g id="425cf8b4-1a5c-4634-8971-1868dabab5c3" data-name="Layer 1">
+                  <rect width="65.18" height="65.18" class="square-arrow"/>
+                  <path
+                    d="M42,40.47,40.47,42H28.76l0-2.59H36.2l1.28.19.15-.29-1-.82L23,24.88,24.86,23,38.47,36.64l.84,1,.29-.15-.22-1.26V28.76H42Z"
+                    style="fill:#fff" />
+                </g>
+              </g>
+            </svg>
+          </div>
+        </a>
+      </div>
+
+      <div class="events-previous__wrapper">
+        <p class="text--primary webinars__contact">→ Previous</p>
         <a class="events-previous__item bg__event--1" href="/Helix Discovery for Multi-Cloud Webinar">
 
             <svg class="square-arrow  square-arrow--previous"
@@ -519,6 +636,16 @@ get_header(); ?>
     </div>
   </div>
 </section>
+
+
+
+
+
+
+
+
+
+
 
 
 <!-- CONTACT SECTION -->
