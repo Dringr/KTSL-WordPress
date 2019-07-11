@@ -33,9 +33,14 @@ body {
 	color: $body-font-color;
 }
 
+h1 {
+	color: #6e6e70;
+}
+
 /** === Post Title === */
 .editor-post-title__block .editor-post-title__input{
   @extend h1;
+  color: black;
 }
 
 /** === Button === */

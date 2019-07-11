@@ -284,65 +284,41 @@ get_header(); ?>
   </div>
   <div class="grid-container__fluid">
     <div class="blog-carousel">
-      <div class="carousel-cell carousel-cell--news">
-        <div class="card bg--primary card-hover">
-          <div class="card-image">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/beautiful-computer-face-834949.jpg" />
-          </div>
-          <div class="card-section">
-            <h4>Rob's Blog</h4>
-            <p class="text--white">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <a href="about" class="button white margin-top-0">Discover more</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-cell carousel-cell--news">
-        <div class="card bg--primary card-hover">
-          <div class="card-image">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/ai-close-up-code-160107.jpg" />
-          </div>
-          <div class="card-section">
-            <h4>Next Webinar</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <a href="about" class="button white margin-top-0">Discover more</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-cell carousel-cell--news">
-        <div class="card bg--primary card-hover">
-          <div class="card-image">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/gettyimages-935639292-170667a.jpg" />
-          </div>
-          <div class="card-section">
-            <h4>BMC Exchange</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <a href="about" class="button white margin-top-0">Discover more</a>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-cell carousel-cell--news">
-        <div class="card bg--primary card-hover">
-          <div class="card-image">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/gettyimages-935639292-170667a.jpg" />
-          </div>
-          <div class="card-section">
-            <h4>We are recruiting</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <a href="about" class="button white margin-top-0">Discover more</a>
-          </div>
-        </div>
+
+
+          <?php
+						$query = new WP_Query(array(
+							'post_status' => 'publish',
+              'category_name' => 'blog',
+							'orderby' => 'publish_date',
+							'order' => 'ASC',
+							'posts_per_page' => -1
+						));
+						?>
+						<?php if ($query->have_posts()) : ?>
+							<!-- the loop -->
+							<?php while ($query->have_posts()) : $query->the_post(); ?>
+
+                <div class="carousel-cell carousel-cell--news">
+                  <div class="card bg--primary card-hover">
+                    <div class="card-image blog__item" style="height:170px;">
+                      <?php the_post_thumbnail(); ?>
+                    </div>
+                    <div class="card-section">
+                      <h4><?php the_title(); ?></h4>
+                      <p class="text--white"><?php the_excerpt(); ?></p>
+                      <a href="<?php the_permalink(); ?>" class="button white margin-top-0">Discover more</a>
+                    </div>
+                  </div>
+                </div>
+
+							<?php endwhile; ?>
+							<!-- end of the loop -->
+							<?php wp_reset_postdata(); ?>
+						<?php else :  ?>
+							<p><?php _e('There are currently no blog posts, please check back soon.'); ?></p>
+						<?php endif; ?>
+
       </div>
     </div>
   </div>

@@ -79,3 +79,13 @@ a.button.white {
     }
   }
 }
+
+.event__item {
+  height: 100%; 
+  position:relative;
+
+  & > img {
+    height: 233px;
+    object-fit: cover;
+  }
+}
