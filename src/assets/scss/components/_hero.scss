@@ -58,6 +58,11 @@ $hero-height: 90vh;
             url("../images/discovery.jpg") no-repeat center;
         background-size: cover;
     }
+    
+    &.site-hero--single {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
 
 //Product Pages

@@ -4,7 +4,7 @@ Template Name: Home
 */
 get_header(); ?>
 
-<section class="site-hero site-hero--home-page">
+<header class="site-hero site-hero--home-page">
   <div class="hero-content">
     <h1>IT that drives better outcomes</h1>
     <p class="text--white">
@@ -13,7 +13,7 @@ get_header(); ?>
   your TCO and maximising your agility.
   </p>
   </div>  
-</section>
+</header>
 
 <!-- LEAD, DON'T FOLLOW SECTION -->
 <section class="section--small position-relative bg--large-hex">
@@ -46,7 +46,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="button__wrapper button__wrapper--mobile">
-        <a href="solutions.html" class="button primary">Discover more</a>
+        <a href="solutions" class="button primary">Discover more</a>
       </div>
     </div>
 
@@ -67,7 +67,7 @@ get_header(); ?>
           proprietary solutions and best-of-breed third-party enhancements.
         </p>
         <div class="button__wrapper button__wrapper--medium-up">
-        <a href="solutions.html" class="button primary">Discover more</a>
+        <a href="solutions" class="button primary">Discover more</a>
         </div>
     </div>
 
@@ -92,7 +92,7 @@ get_header(); ?>
             </p>
           </div>
           <div>
-            <a href="/solutions/increase-productivity.html" class="button primary">Discover more</a>
+            <a href="/solutions/increase-productivity" class="button primary">Discover more</a>
           </div>
         </div>
       </div>
@@ -107,7 +107,7 @@ get_header(); ?>
             </p>
           </div>
           <div>
-            <a href="/solutions/drive-business.html" class="button primary">Discover more</a>
+            <a href="/solutions/drive-business" class="button primary">Discover more</a>
           </div>
         </div>
       </div>
@@ -122,7 +122,7 @@ get_header(); ?>
             </p>
           </div>
           <div>
-            <a href="/solutions/moving-to-the-cloud.html" class="button primary">Discover more</a>
+            <a href="/solutions/moving-to-the-cloud" class="button primary">Discover more</a>
           </div>
         </div>
       </div>
@@ -137,7 +137,7 @@ get_header(); ?>
             </p>
           </div>
           <div>
-            <a href="/solutions/leverage-artificial-intelligence-AI.html" class="button primary">Discover more</a>
+            <a href="/solutions/leverage-artificial-intelligence-AI" class="button primary">Discover more</a>
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@ get_header(); ?>
           complex BMC environments.
         </p>
         <div class="padding-top-2 button__wrapper">
-          <a href="/about-us.html" class="button primary">Discover more</a>
+          <a href="/about-us" class="button primary">Discover more</a>
         </div>
       </div>
     </div>
@@ -229,7 +229,7 @@ get_header(); ?>
                   For 200 to 125,000 users.
                   Delivered in 2–4 weeks.</p>
                 <div class="button__wrapper">
-                  <a href="/case-studies.html#carousel-cell1" class="button primary">Discover more</a>
+                  <a href="/case-studies#carousel-cell1" class="button primary">Discover more</a>
                 </div>
 
               </div>
@@ -241,7 +241,7 @@ get_header(); ?>
                   ensure the key processes could be mapped
                   without compromising either the solution, or the business requirements.</p>
                 <div class="button__wrapper">
-                  <a href="/case-studies.html#carousel-cell2" class="button primary">Discover more</a>
+                  <a href="/case-studies#carousel-cell2" class="button primary">Discover more</a>
                 </div>
               </div>
               <div class="tabs-panel" id="panel3v">
@@ -254,7 +254,7 @@ get_header(); ?>
                   Attributes
                   and Service Requests.</p>
                <div class="button__wrapper">
-                 <a href="/case-studies.html#carousel-cell3" class="button primary">Discover more</a>
+                 <a href="/case-studies#carousel-cell3" class="button primary">Discover more</a>
                </div>
               </div>
               <div class="tabs-panel" id="panel4v">
@@ -263,7 +263,7 @@ get_header(); ?>
                  After winning a series of international contracts to support the World Health Organisation program to clamp down on counterfeit alcohol and cigarettes De La Rue (DLR) needed to meet the needs of its internal and external users via a “one-stop shop” service desk solution, which was easy to use and integrated with multiple systems.
                  </p>
                 <div class="button__wrapper">
-                <a href="/case-studies.html#carousel-cell4" class="button primary">Discover more</a>
+                <a href="/case-studies#carousel-cell4" class="button primary">Discover more</a>
                 </div>
               </div>
             </div>
@@ -295,7 +295,7 @@ get_header(); ?>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="about.html" class="button white margin-top-0">Discover more</a>
+            <a href="about" class="button white margin-top-0">Discover more</a>
           </div>
         </div>
       </div>
@@ -310,7 +310,7 @@ get_header(); ?>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="about.html" class="button white margin-top-0">Discover more</a>
+            <a href="about" class="button white margin-top-0">Discover more</a>
           </div>
         </div>
       </div>
@@ -325,7 +325,7 @@ get_header(); ?>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="about.html" class="button white margin-top-0">Discover more</a>
+            <a href="about" class="button white margin-top-0">Discover more</a>
           </div>
         </div>
       </div>
@@ -340,7 +340,7 @@ get_header(); ?>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <a href="about.html" class="button white margin-top-0">Discover more</a>
+            <a href="about" class="button white margin-top-0">Discover more</a>
           </div>
         </div>
       </div>
@@ -389,7 +389,7 @@ get_header(); ?>
         </label>
         <div class="padding-top-2">
           <div class="button__wrapper">
-          <a href="about.html" class="button primary">Download</a>
+          <a href="about" class="button primary">Download</a>
           </div>
         </div>
       </div>
@@ -465,7 +465,7 @@ get_header(); ?>
 
       <div class="events-previous__wrapper">
         <p class="text--primary webinars__contact">→ Previous</p>
-        <a class="events-previous__item bg__event--1" href="/Helix Discovery for Multi-Cloud Webinar.html">
+        <a class="events-previous__item bg__event--1" href="/Helix Discovery for Multi-Cloud Webinar">
 
             <svg class="square-arrow  square-arrow--previous"
               xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.18 65.18">
@@ -484,7 +484,7 @@ get_header(); ?>
           </p>
 
         </a>
-        <a class="events-previous__item bg__event--2" href="/Helix Discovery for Multi-Cloud Webinar.html">
+        <a class="events-previous__item bg__event--2" href="/Helix Discovery for Multi-Cloud Webinar">
           <svg class="square-arrow  square-arrow--previous"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65.18 65.18">
             <title>square-arrow</title>
@@ -537,7 +537,7 @@ get_header(); ?>
           <input class="form form--grey" type="text" placeholder="Company name" />
         </label>
         <div class="button__wrapper">
-        <a href="about.html" class="button primary">Register</a>
+        <a href="about" class="button primary">Register</a>
         </div>
       </div>
     </div>
@@ -559,7 +559,7 @@ get_header(); ?>
               vacancies or send us your CV for future reference.
             </p>
             <div>
-              <a href="/careers.html" class="button white">View vacancies</a>
+              <a href="/careers" class="button white">View vacancies</a>
             </div>
           </div>
         </div>

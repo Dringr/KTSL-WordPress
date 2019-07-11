@@ -117,6 +117,10 @@
   }
 }
 
+.blog-container {
+        max-width: 1070px;
+    }
+
 #example-tabs {
   @media #{$small-only} {
     padding-bottom: 2rem;
