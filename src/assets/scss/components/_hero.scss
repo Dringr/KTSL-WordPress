@@ -6,56 +6,37 @@ $hero-height: 90vh;
 }
 
 .site-hero {
-    max-height: $hero-height;
+    height: $hero-height;
     display: flex;
     align-items: center;
     position: relative;
 
-    &.site-hero--home-page {
-        background:
-            linear-gradient(#00000040, #00000040),
-            url("../images/bethany-legg-9248-unsplash.jpg") bottom center no-repeat;
-        @include bg--center;
-    }
-
     &.site-hero--solutions {
-        background:
-            linear-gradient(#00000040, #00000040),
-            url("../images/blur-business-chart-159888.jpg") top right no-repeat;
+        background: url("../images/blur-business-chart-159888.jpg") top right no-repeat;
         @include bg--center;
     }
 
     &.site-hero--insights {
-        background:
-            linear-gradient(#00000040, #00000040),
-            url("../images/browser-coffee-cup-6335.jpg") no-repeat center;
+        background: url("../images/browser-coffee-cup-6335.jpg") no-repeat center;
         background-size: cover;
     }
 
     &.site-hero--about-us {
-        background:
-            linear-gradient(#00000040, #00000040),
-            url("../images/dylan-gillis-533818-unsplash.jpg") no-repeat center;
+        background: url("../images/dylan-gillis-533818-unsplash.jpg") no-repeat center;
         background-size: cover;
     }
 
     &.site-hero--careers {
-        background:
-            linear-gradient(#00000040, #00000040),
-            url("../images/headway-537308-unsplash.jpg") no-repeat center;
+        background: url("../images/headway-537308-unsplash.jpg") no-repeat center;
         background-size: cover;
     }
 
     &.site-hero--contact {
-        background:
-            linear-gradient(#00000040, #00000040),
-            url("../images/mark-solarski-209233-unsplash.jpg") no-repeat center;
+        background: url("../images/mark-solarski-209233-unsplash.jpg") no-repeat center;
         background-size: cover;
     }
     &.site-hero--discovery {
-        background:
-            linear-gradient(#00000040, #00000040),
-            url("../images/discovery.jpg") no-repeat center;
+        background: url("../images/discovery.jpg") no-repeat center;
         background-size: cover;
     }
     

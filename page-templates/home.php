@@ -300,13 +300,13 @@ get_header(); ?>
 							<?php while ($query->have_posts()) : $query->the_post(); ?>
 
                 <div class="carousel-cell carousel-cell--news">
-                  <div class="card bg--primary card-hover">
+                  <div class="card bg--primary card-hover blog">
                     <div class="card-image blog__item" style="height:170px;">
                       <?php the_post_thumbnail(); ?>
                     </div>
-                    <div class="card-section">
+                    <div class="card-section blog__section">
                       <h4><?php the_title(); ?></h4>
-                      <p class="text--white"><?php the_excerpt(); ?></p>
+                      <div class="text--white"><?php the_excerpt(); ?></div>
                       <a href="<?php the_permalink(); ?>" class="button white margin-top-0">Discover more</a>
                     </div>
                   </div>
