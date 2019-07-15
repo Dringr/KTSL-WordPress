@@ -499,9 +499,14 @@
   }
 }
 
-.event__item>img {
-  height: 100%;
-  object-fit: cover;
+.event__item {
+    overflow:hidden; 
+    height: 100%; 
+    position:relative;
+    >img {
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .events-previous__item {

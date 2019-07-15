@@ -460,7 +460,7 @@ get_header(); ?>
 
 
                         <a href="<?php the_permalink(); ?>" class="events-previous__item">
-                            <div class="flex-child-auto event__item" style="height: 100%; position:relative;">
+                            <div class="flex-child-auto event__item">
 
                                 <?php the_post_thumbnail(); ?>
 
