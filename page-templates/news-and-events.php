@@ -23,7 +23,7 @@ get_header(); ?>
         <h2 class="text-center text--primary">What's new?</h2>
         <div class="news">
 
-           <?php
+            <?php
 
     $blog_cat = array(
         'category_name' => 'blog',
@@ -38,9 +38,9 @@ get_header(); ?>
     if ( $blog_query->have_posts()) {
         $i = 0; 
         while ( $blog_query->have_posts()) {
-             $i++;
+            $i++;
             $blog_query->the_post(); ?>
-                   
+
 
             <div class="news__item">
                 <div class="card bg--primary card-hover blog">
@@ -49,8 +49,8 @@ get_header(); ?>
                     </div>
                     <div class="card-section blog__section">
                         <h4><?php the_title(); ?></h4>
-                       <?php if ($i<=3) { // these are added and not within the 3 show posts ?>  
-                       <div class="text--white">
+                        <?php if ($i <= 3) { // these are added and not within the 3 show posts ?>
+                        <div class="text--white">
                             <?php the_excerpt(); ?>
                         </div>
                         <?php } ?>
@@ -59,13 +59,10 @@ get_header(); ?>
                 </div>
 
             </div>
-    
-                     
-                     <?php
-                } ?>
 
+            <?php } ?>
 
-<?php } else {
+            <?php } else {
         // no posts found
     }
 
