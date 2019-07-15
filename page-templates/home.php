@@ -292,7 +292,7 @@ get_header(); ?>
               'category_name' => 'blog',
 							'orderby' => 'publish_date',
 							'order' => 'ASC',
-							'posts_per_page' => -1
+							'posts_per_page' => 6
 						));
 						?>
 						<?php if ($query->have_posts()) : ?>
@@ -441,9 +441,6 @@ get_header(); ?>
 
       <div class="events-previous__wrapper">
         <p class="text--primary webinars__contact">→ Previous</p>
-
-
-
 
                         <?php
                           $query = new WP_Query(array(

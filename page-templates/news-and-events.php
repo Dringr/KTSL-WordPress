@@ -23,40 +23,53 @@ get_header(); ?>
         <h2 class="text-center text--primary">What's new?</h2>
         <div class="news">
 
-            <?php
-						$query = new WP_Query(array(
-							'post_status' => 'publish',
-              'category_name' => 'blog',
-							'orderby' => 'publish_date',
-							'order' => 'ASC',
-							'posts_per_page' => -1
-						));
-						?>
-            <?php if ($query->have_posts()) : ?>
-            <!-- the loop -->
-            <?php while ($query->have_posts()) : $query->the_post(); ?>
+           <?php
 
+    $blog_cat = array(
+        'category_name' => 'blog',
+        'showposts' => -1,
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+
+    $blog_query = new WP_Query( $blog_cat );
+    if ( $blog_query->have_posts()) {
+        $i = 0; 
+        while ( $blog_query->have_posts()) {
+             $i++;
+            $blog_query->the_post(); ?>
+                   
 
             <div class="news__item">
-                <div class="card card-hover bg--primary">
-                    <div class="card-image">
+                <div class="card bg--primary card-hover blog">
+                    <div class="card-image blog__item" style="height:170px;">
                         <?php the_post_thumbnail(); ?>
                     </div>
-                    <div class="card-section">
+                    <div class="card-section blog__section">
                         <h4><?php the_title(); ?></h4>
-                        <p class="text--white card-text"><?php the_excerpt(); ?></p>
+                       <?php if ($i<=3) { // these are added and not within the 3 show posts ?>  
+                       <div class="text--white">
+                            <?php the_excerpt(); ?>
+                        </div>
+                        <?php } ?>
                         <a href="<?php the_permalink(); ?>" class="button white">Discover more</a>
                     </div>
                 </div>
 
             </div>
+    
+                     
+                     <?php
+                } ?>
 
-            <?php endwhile; ?>
-            <!-- end of the loop -->
-            <?php wp_reset_postdata(); ?>
-            <?php else :  ?>
-            <p><?php _e('There are currently no blog posts, please check back soon.'); ?></p>
-            <?php endif; ?>
+
+<?php } else {
+        // no posts found
+    }
+
+    wp_reset_postdata(); ?>
 
 
 

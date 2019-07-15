@@ -80,7 +80,7 @@ a.button.white {
   }
 }
 
-.event__item {
+.event__item { 
   height: 100%; 
   position:relative;
 
@@ -88,4 +88,43 @@ a.button.white {
     height: 233px;
     object-fit: cover;
   }
+}
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+
+  &__item img {
+    height: 170px;
+    object-fit: cover;
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+
+    & div {
+      max-height: 7.1rem;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      flex-grow: 1;
+    }
+  }
+
+  & .button {
+    justify-self: flex-end;
+    width: 80%;
+    margin-top: auto;
+    @include breakpoint(medium down) {
+        width: 100%;
+    }
+  }
+
+  & h4 {
+    margin-bottom: 1rem;
+    max-height: 4.3rem;
+    overflow: hidden;
+  }
+
 }
