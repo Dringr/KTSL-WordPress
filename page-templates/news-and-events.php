@@ -68,18 +68,10 @@ get_header(); ?>
 
     wp_reset_postdata(); ?>
 
-
-
-
-
             <div class="container">
                 <h2 class="text--primary text-center padding-top-2 padding-bottom-1">Latest events</h2>
                 <div class="grid-container grid-container-padded grid--demo">
                     <div class="grid-x grid-padding-x grid-margin-x small-up-1 medium-up-2 large-up-3">
-
-
-
-
 
 
                         <?php
@@ -101,14 +93,14 @@ get_header(); ?>
 
                                 <?php the_post_thumbnail(); ?>
 
-                                <p style="position: absolute; bottom: 13px; left: 100px;"
+                                <p style="position: absolute; bottom: 13px; left: 75px; right:5px;"
                                     class="text--white text--subtitle">
                                     <?php the_title(); ?>
                                 </p>
                                 <div>
                                     <img style="position: absolute; bottom:0; left:0;"
                                         src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/svg/square-arrow.svg"
-                                        alt="" width="80px;">
+                                        alt="" width="60px;">
                                 </div>
                             </div>
                         </a>

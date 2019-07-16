@@ -86,9 +86,6 @@ get_header(); ?>
               better business outcomes for our clients
             </p>
           </div>
-          <div>
-            <a href="about.html" class="button primary">Discover more</a>
-          </div>
         </div>
       </div>
       <div class="our-experience__item">
@@ -103,9 +100,6 @@ get_header(); ?>
             <p class="card-content">
               We’re long term advisors to over 180 organisations across both the private and public sectors
             </p>
-          </div>
-          <div>
-            <a href="about.html" class="button primary">Discover more</a>
           </div>
         </div>
       </div>
@@ -122,9 +116,6 @@ get_header(); ?>
               We’ve been supporting BMC software for over 20 years, delivering the two largest UK implementations
             </p>
           </div>
-          <div>
-            <a href="about.html" class="button primary">Discover more</a>
-          </div>
         </div>
       </div>
       <div class="our-experience__item">
@@ -140,9 +131,6 @@ get_header(); ?>
               We are a BMC Certified Professional for FootPrints Service Core, Remedy ITSM, Truesight and Control-M
             </p>
           </div>
-          <div>
-            <a href="about.html" class="button primary">Discover more</a>
-          </div>
         </div>
       </div>
     </div>
@@ -154,7 +142,7 @@ get_header(); ?>
 
 
 
-<!-- OUR EXPERIENCE SECTION -->
+<!-- OUR EXPERIENCE SECTION MOBILE -->
 <section
   class="section--medium-carousel bg--tertiary bg-hex-02 section--experience section--experience-mobile position-relative">
   <div class="container">
@@ -179,9 +167,7 @@ get_header(); ?>
               better business outcomes for our clients
             </p>
           </div>
-          <div>
-            <a href="about.html" class="button primary">Discover more</a>
-          </div>
+      
         </div>
       </div>
       <div class="carousel-cell our-experience__item">
@@ -197,9 +183,7 @@ get_header(); ?>
               We’re long term advisors to over 180 organisations across both the private and public sectors
             </p>
           </div>
-          <div>
-            <a href="about.html" class="button primary">Discover more</a>
-          </div>
+      
         </div>
       </div>
       <div class="carousel-cell our-experience__item">
@@ -216,9 +200,7 @@ get_header(); ?>
               implementations
             </p>
           </div>
-          <div>
-            <a href="about.html" class="button primary">Discover more</a>
-          </div>
+      
         </div>
       </div>
       <div class="carousel-cell our-experience__item">
@@ -298,15 +280,32 @@ get_header(); ?>
         <p class="text--white">
           CEO
         </p>
+
+      <ul class="accordion" data-accordion data-multi-expand="true" data-allow-all-closed="true">
+          <li class="accordion-item" data-accordion-item>
+            <a href="#" class="accordion-title">Bio</a>
+            <div class="accordion-content" data-tab-content>
+              <p>
+                Rob is a highly experienced Senior Manager, with a very broad level of experience within Information
+                Technology and Business. He has extensive expertise in helping organisations to successfully implement
+                major change initiatives enabled by new technology, reengineered business processes and structures.
+                Experience of managing major outsourcing projects. Persuasive and focussed management style with strong
+                visionary and leadership skills.
+              </p>
+            </div>
+          </li>
+        </ul>
+
+
       </div>
-      <div class="team__item border--team">
+      <div class="team__item">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/image--MR.png" alt="" />
         <p class="text--team">Mark Robinson</p>
         <p class="text--white">
           Managing Director
         </p>
       </div>
-      <div class="team__item">
+      <div class="team__item border--team">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/image--AP.png" alt="" />
         <p class="text--team">Aaron Perrott</p>
         <p class="text--white">
@@ -320,7 +319,7 @@ get_header(); ?>
           COO
         </p>
       </div>
-      <div class="team__item border--team">
+      <div class="team__item">
         <img src="<?php bloginfo('stylesheet_directory'); ?>/src/assets/images/image--DS.png" alt="" />
         <p class="text--team">Darren Spillane</p>
         <p class="text--white">

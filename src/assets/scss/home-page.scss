@@ -237,10 +237,7 @@
 
 
 //Arrow
-
-.bg__event--1:hover .square-arrow,
-.bg__event--2:hover .square-arrow,
-.bg__event--3:hover .square-arrow,
+.event__item:hover .square-arrow,
 .event-upcoming__wrapper:hover .square-arrow {
   fill: #29bbb0;
 }
@@ -248,7 +245,6 @@
 .square-arrow {
   fill: #13e2ce;
   transition: fill .4s ease;
-  width: 55px;
 
   &--previous {
     @include breakpoint(small only) {
@@ -260,11 +256,11 @@
 
 // News & Events Section
 .event {
-  background: url('../images/tbn-dso-cloud-security.jpg');
-  background-size: cover;
-  background-position: 70% 30%;
   height: 485px;
-
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
   @include breakpoint(medium down) {
     height: 300px;
   }
@@ -360,8 +356,10 @@
 }
 
 .case-studies-wrapper {
-  height: 430px;
-
+  height: 480px;
+  @include breakpoint(small only) {
+    height: auto;
+  }
   &__item {
     @include xy-cell(10);
 
@@ -552,7 +550,7 @@
 
 .events-contact__wrapper {
   @include xy-cell(12);
-  padding: 2rem;
+  padding: 0 2rem 2rem 2rem;
 
   @include breakpoint(large) {
     @include xy-cell(4);

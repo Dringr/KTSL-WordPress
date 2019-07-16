@@ -10,7 +10,8 @@
 
 // Generic components
 @include foundation-button;
-
+@include foundation-accordion-menu;
+@include foundation-accordion;
 @include foundation-card;
 
 //Custom CSS Partials
@@ -72,6 +73,32 @@
     background-clip: content-box;
 }
 
+.bg--large-hex {
+  background: url("../images/bg--large-hex.png");
+  background-repeat: no-repeat;
+  background-position: left -25% top 106%;
+}
+
+.bg--large-hex-2 {
+  background: url("../images/bg--large-hex.png");
+  background-repeat: no-repeat;
+  background-position: right -25% top 100%;
+}
+
+
+.bg--large-hex-2-alt {
+  background-image: url("../images/bg--large-hex-alt.png");
+  background-repeat: no-repeat;
+    background-position: left -50% top -10%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    /* Set a specific height */
+    height: 100%;
+
+  @include breakpoint(small only) {
+    background-position: left 105% top -69%;
+  }
+}
 
 .why-ktsl {
     @include xy-grid-layout(1, '.why-ktsl__item');
@@ -163,7 +190,7 @@
 
     .card {
         @include breakpoint(medium down) {
-            height: 430px;
+            height: 370px;
             margin: 1.5rem .2rem;
             padding: 1rem;
         }
@@ -196,7 +223,7 @@
 }
 
 .team {
-    @include xy-grid-layout(2, '.team__item', true, 30px, padding, top right bottom left);
+    @include xy-grid-layout(1, '.team__item', true, 30px, padding, top right bottom left);
 
 
     @include breakpoint(medium) {
@@ -204,6 +231,6 @@
     }
 
     @include breakpoint(large) {
-        @include xy-grid-layout(4, '.team__item', true, 30px, padding, top right bottom left);
+        @include xy-grid-layout(3, '.team__item', true, 30px, padding, top right bottom left);
     }
 }

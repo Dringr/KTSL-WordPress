@@ -37,23 +37,23 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 	function foundationpress_scripts() {
 
 		if ( is_page( 'home' ) ) {
-    	// Static page style
-            wp_enqueue_style( 'home-page-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'home-page.css' ) );
+		// Static page style
 			wp_enqueue_style( 'aos', 'https://unpkg.com/aos@next/dist/aos.css' );
 			wp_enqueue_style( 'flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
+			wp_enqueue_style( 'home-page-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'home-page.css' ) );
 			wp_enqueue_script( 'flickity-script', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '2.2.1', true );
 			wp_enqueue_script( 'aos-script', 'https://unpkg.com/aos@next/dist/aos.js', array(), '2.2.1', true );
 			wp_enqueue_script( 'home-page', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'home-page.js' ), array(), '2', true );
 			
 		} else if ( is_page( 'news' ) ) {
-    	// Static page style
-            wp_enqueue_style( 'news-page-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'news-page.css' ) );
+		// Static page style
+			wp_enqueue_style( 'news-page-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'news-page.css' ) );
 
 		} else if ( is_page( 'about-us' ) ) {
-    	// Static page style
-            wp_enqueue_style( 'about-us-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'about-page.css' ) );
+		// Static page style
 			wp_enqueue_style( 'aos', 'https://unpkg.com/aos@next/dist/aos.css' );
 			wp_enqueue_style( 'flickity', 'https://unpkg.com/flickity@2/dist/flickity.min.css' );
+			wp_enqueue_style( 'about-us-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'about-page.css' ) );
 			wp_enqueue_script( 'flickity-script', 'https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js', array(), '2.2.1', true );
 			wp_enqueue_script( 'aos-script', 'https://unpkg.com/aos@next/dist/aos.js', array(), '2.2.1', true );
 			wp_enqueue_script( 'about-page', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'about-page.js' ), array(), '2', true );
