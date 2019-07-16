@@ -600,8 +600,8 @@ get_header(); ?>
                                         alt="" width="50px;" />
                                 </div>
                                 <p>
-                                    Let’s talk<br />
-                                    0845 034 8001
+                                    Let’s talk<br /> 
+                                <a class="text--white" href="tel:08450348001">0845 034 8001</a>
                                 </p>
                             </div>
 
@@ -612,7 +612,8 @@ get_header(); ?>
                                 </div>
                                 <p>
                                     Drop us a line<br />
-                                    sales@ktsl.com
+                                    <a class="text--white" href="mailto:sales@ktsl.com?Subject=KTSL%20Home%20Page">sales@ktsl.com</a>
+                                    
                                 </p>
                             </div>
 

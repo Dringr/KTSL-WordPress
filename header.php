@@ -44,7 +44,7 @@
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>about-us"><span>About us</span></a>
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>careers"><span>Careers</span></a>
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>contact-us"><span>Contact</span></a>
-    <a href=""><span>Support</span></a>
+    <a href="https://ktsl.secure.force.com/apex/bmcservicedesk__sssitelogin?lang=en-GB" target="_blank"><span>Support</span></a>
   </nav>
   <div id="navbar" class="menu__toggler">
     <span></span>
