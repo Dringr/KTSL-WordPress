@@ -1,0 +1,65 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Generic components
+@include foundation-button;
+
+
+//Custom CSS Partials
+@import 'components/hero',
+'./modules/footer',
+'./modules/navigation',
+'components/sections',
+'components/buttons',
+'./global/typography',
+'components/forms';
+
+
+.contact-info {
+  @include xy-cell(10);
+  @include xy-cell-offset(1);
+
+  @include breakpoint(large) {
+    @include xy-cell(4);
+    @include xy-cell-offset(1);
+  }
+}
+
+.contact-form {
+  @include xy-cell(10);
+  @include xy-cell-offset(1);
+
+  @include breakpoint(large) {
+    @include xy-cell(4);
+    @include xy-cell-offset(2);
+  } 
+  &__title {
+  padding-bottom: 3rem;
+  font-size:1.4rem;
+  }
+  &__button {
+    padding: 0.8rem 3.5rem;
+    margin-top:0;
+  }
+}
+
+
+label textarea {
+  border: 3px solid grey !important;
+}
+
+textarea::placeholder {
+  color: #444;
+}
+
+textarea[rows] {
+  padding: 0.5rem;
+  margin-top: 2rem;
+}

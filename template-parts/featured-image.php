@@ -10,9 +10,6 @@ data-interchange="[<?php the_post_thumbnail_url( 'featured-small' ); ?>, small],
 [<?php the_post_thumbnail_url( 'featured-large' ); ?>, large], 
 [<?php the_post_thumbnail_url( 'featured-xlarge' ); ?>, xlarge]" 
 style=" background-size: cover;background-repeat: no-repeat;">
-<div class="hero-content">
-    <h1 class="text--white" style="font-size:3rem;"><?php the_title(); ?></h1>
-  </div> 
 
 </header>
 

@@ -477,12 +477,10 @@
 .events-previous__wrapper {
   @include xy-cell(12);
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-
+  flex-direction: column;
   @include breakpoint(large) {
     @include xy-cell(3);
-    flex-direction: column;
   }
 
   >p {
@@ -523,7 +521,8 @@
   }
 
   @include breakpoint(small only) {
-    flex-wrap: wrap;
+    width:100%;
+
   }
 
   p {

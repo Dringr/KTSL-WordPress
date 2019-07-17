@@ -72,6 +72,10 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		wp_enqueue_style( 'solutions-page-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'case-studies-page.css' ) );
 		wp_enqueue_script( 'case-studies-page', get_stylesheet_directory_uri() . '/dist/assets/js/' . foundationpress_asset_path( 'case-studies-page.js' ), array(), '2', true );
 
+		} else if ( is_page( 'contact-us' ) ) {
+		// Static page style
+		wp_enqueue_style( 'contact-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'contact-page.css' ) );
+
 		} else {
 		// Enqueue the main Stylesheet.
 		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'app.css' ), array(), '2.10.4', 'all' );
