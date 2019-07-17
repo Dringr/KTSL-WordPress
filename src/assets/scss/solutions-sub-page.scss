@@ -1,0 +1,82 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+
+
+@include foundation-global-styles;
+@include foundation-forms;
+@include foundation-typography;
+
+// Generic components
+@include foundation-button;
+@include foundation-card;
+
+//Custom CSS Partials
+@import './modules/footer',
+'./modules/navigation',
+'components/sections',
+'components/buttons',
+'./global/typography',
+'components/forms';
+
+
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+}
+
+
+.solutions-content {
+  @include xy-cell(10);
+  @include xy-cell-offset(1);
+  padding-bottom: 3rem;
+  text-align: center;
+}
+
+.solutions-products {
+  @include xy-grid;
+  @include xy-grid-layout(4, '.solutions-products__item', true, 30, margin, right bottom left);
+
+  @include breakpoint(medium only) {
+    @include xy-grid-layout(2, '.solutions-products__item');
+  }
+
+  @include breakpoint(small only) {
+    @include xy-grid-layout(1, '.solutions-products__item');
+  }
+
+  &__item {
+    display: flex;
+  }
+}
+
+.solutions-card {
+  background: #444497;
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+
+  &__title {
+    padding-top: 3rem
+  }
+
+  img {
+    height: 85px;
+  }
+}
+
+.solutions-sub-page-hero {
+  position: relative;
+
+  &__heading {
+    top: 35%;
+    bottom: 65%;
+    left: 14%;
+    position: absolute
+  }
+}

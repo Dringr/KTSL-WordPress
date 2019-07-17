@@ -73,7 +73,7 @@ get_header(); ?>
                     Minimise costs and maximise the business value of your IT team.
                 </p>
                 <div class="button__wrapper">
-                    <a href="/solutions/increase-productivity.html" class="button primary">Discover more</a>
+                    <a href="/solutions/increase-productivity-optimise-user-experiences/" class="button primary">Discover more</a>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@ get_header(); ?>
                     Improve business automation and upscale agility
                 </p>
                 <div class="button__wrapper">
-                    <a href="/solutions/drive-business.html" class="button primary">Discover more</a>
+                    <a href="/solutions/drive-business-growth-by-increasing-your-its-input/" class="button primary">Discover more</a>
                 </div>
             </div>
             <div class="animation-2__image solution-image--iphone">
@@ -222,7 +222,7 @@ get_header(); ?>
                     Plan and implement your digital journey with confidence
                 </p>
                 <div class="button__wrapper">
-                    <a href="/solutions/moving-to-the-cloud.html" class="button primary">Discover more</a>
+                    <a href="/solutions/keep-control-while-moving-to-the-cloud" class="button primary">Discover more</a>
                 </div>
             </div>
         </div>
@@ -243,7 +243,7 @@ get_header(); ?>
                     Leverage artificial intelligence (AI) for competitive advantage
                 </p>
                 <div class="button__wrapper">
-                    <a href="/solutions/leverage-artificial-intelligence-AI.html" class="button white">Discover
+                    <a href="/solutions/leverage-artificial-intelligence-AI" class="button white">Discover
                         more</a>
                 </div>
             </div>

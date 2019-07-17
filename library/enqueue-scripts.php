@@ -76,6 +76,9 @@ if ( ! function_exists( 'foundationpress_scripts' ) ) :
 		// Static page style
 		wp_enqueue_style( 'contact-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'contact-page.css' ) );
 
+		} else if ( is_page( array( 'keep-control-while-moving-to-the-cloud', 'increase-productivity-optimise-user-experiences', 'leverage-artificial-intelligence-ai', 'drive-business-growth-by-increasing-your-its-input' ) ) ) {
+		// Static page style
+		wp_enqueue_style( 'solutions-sub-page-style', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'solutions-sub-page.css' ) );
 		} else {
 		// Enqueue the main Stylesheet.
 		wp_enqueue_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/dist/assets/css/' . foundationpress_asset_path( 'app.css' ), array(), '2.10.4', 'all' );
